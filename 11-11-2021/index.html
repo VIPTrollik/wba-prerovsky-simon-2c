@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="reset_button" onclick = "reset();">reset</button>
+
+    <div id="game_menu">
+
+        <h1>Welcome</h1>
+        <div style="display: flex;flex-wrap: wrap;"><p id="infop">size x:</p><input id="height_input" type="number" value=10></div>
+        <button onclick ="new_game();">start</button>
+    </div>
+    <div id="gamecontainer">
+        <div class="radek" style="margin:30% 0px;">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+      </body>
+    
+      <script>
+        state = "not"
+        gamecontainer = document.getElementById("gamecontainer")
+        menudiv = document.getElementById("game_menu")
+        size_input = document.getElementById("height_input")
+        
+
+        function new_game(){
+            console.log("starting")
+            state = "running"
+            const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+            let elements_x = parseInt(size_input.value)
+            let element_size_x = width / elements_x
+            let elements_y = Math.round(height / element_size_x)
+            console.log(elements_y)
+            gamecontainer.innerHTML = ""
+            menudiv.hidden = true;
+            let radek_element = document.createElement("div")
+            radek_element.className = "radek"
+            let sqr_item = document.createElement("div")
+            sqr_item.className = "item"    
+            document.documentElement.style.setProperty('--elems_x', elements_x);
+            document.documentElement.style.setProperty('--elems_y', elements_y);
+            for(let i = 0;i<elements_y;i++){
+                let radek_clone = radek_element.cloneNode()
+                for(let i = 0;i<elements_x;i++){
+                    radek_clone.appendChild(sqr_item.cloneNode())
+                }
+                gamecontainer.appendChild(radek_clone)
+            }
+            
+
+
+        }
+        function reset(){
+            console.log("reset")
+            menudiv.hidden = false;
+            gamecontainer.innerHTML = ""
+
+        }
+
+
+
+    </script>
+
+</html>
