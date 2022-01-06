@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+.topNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* height: fit-content; */
+    background-color: rgba(38, 32, 62, 0.8);
+    align-items: center;
+    height: 20%;
+    justify-content: center;
+    width: 80%;
+    margin: 0px auto;
+}
+
+topnavimg {}
+
+.topNav img {
+    /* width: 220px; */
+    /* height: fit-content; */
+}
+
+img.logoImg {
+    width: 220px;
+    height: fit-content;
+}
+
+img.searchIcon {
+    margin: 0px auto;
+    height: 5%;
+    width: 5vh;
+}
+
+img#logoImg {
+    width: 220px;
+    height: auto;
+}
+
+img#searchIcon {
+    margin: 0px auto;
+    /* height: 5%; */
+    width: 5vh;
+}
+
+.topNavCenter {margin-left: auto;margin-right: auto;display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;justify-content: center;width: 50%;gap: 10%;}
+
+.topNavCenter p {
+    /* gap: 65vw; */
+    color: white;
+    margin: 0px;
+}
+
+.mainCentered h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.mainCentered {
+    margin: auto;
+    width: 50%;
+    background: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 10px 5px white;
+}
+
+.topNavSearch {width: 25%;}
+
+.searchIcon img {
+    margin: 0px auto;
+    height: 5%;
+    width: 5vh;
+}
