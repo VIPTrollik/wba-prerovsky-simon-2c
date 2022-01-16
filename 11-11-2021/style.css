@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=The+Nautigal:wght@700&display=swap');
+
+
 :root {
     --elems_x: 1;
     --elems_y: 1;
@@ -13,7 +16,7 @@
     flex-wrap: nowrap;
     width: 100vw;
 }
-.item{
+.item, .winItem{
     background-color: red;
     height: calc(100vh / var(--elems_y));
     width: calc(100vw / var(--elems_x));
@@ -26,13 +29,23 @@
 
 .item:hover {
     background: orange;
-    transform: scale(3);
+    transform: scale(2);
     transition-duration: 0ms;
     color: white;
     z-index: 100;
-    border-radius: calc(50vw / var(--elems_x));
 }
 
+.winItem:hover {
+    background: #0044ff;
+    transform: scale(1.5);
+    transition-duration: 100ms;
+    color: white;
+    z-index: 100;
+    background-image: url("src/gandma_transparent.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(30vh / var(--elems_y));
+}
 .item:hover {
     color: blue;
 }
@@ -75,4 +88,55 @@ button#reset_button {
 
 div#game_menu {
     /* z-index: 10000; */
+}
+
+div#start_screen {/* margin: auto; *//* left: 50%; */display: flex;flex-direction: column;flex-wrap: nowrap;align-content: center;justify-content: center;align-items: flex-start;height: 100vh;}
+
+img.grandImage {
+    position: fixed;
+    /* height: 10%; */
+    top: 15%;
+    left: 60%;
+    /* width: 40%; */
+    height: 70%;
+}
+
+div#start_screen_center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17%;
+}
+
+h1 {}
+
+h1.gameName {
+    color: yellow;
+    font-size: 6rem;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'The Nautigal', cursive;
+}
+
+
+.startCenterLow {
+    display: flex;
+    gap: 22%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+p.startButton {
+    background: white;
+    padding: 10%;
+    border-radius: 15px;
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'The Nautigal', cursive; */
+    font-weight: 700;
+    font-size: 1rem;
 }
