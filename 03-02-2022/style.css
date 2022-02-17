@@ -1,0 +1,42 @@
+:root{
+    --boxes-height: 5;
+    --boxes-width: 5;
+    --number-height: 20;
+    --number-width: 10;
+}
+
+
+
+.gridBox{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* column-gap: 20px; */
+    /* row-gap: 20px; */
+    max-height: 80vh;
+    max-width: 80vw;
+    width: 20vw;
+    margin: auto;
+    margin-top: 10vh;
+    grid-template-columns: repeat(var(--number-width), 1fr);
+    grid-template-rows: repeat(var(--number-height), 1fr);
+    /* height: 10px; */
+}
+
+.gridBox p{
+    background-color: lightblue;
+    margin: 0;
+    height: 100%;
+    width: fit-content;
+    text-align: center;
+}
+
+.theFirst{
+    grid-row: span 2;
+}
+.last {
+    grid-column: span 2;
+}
+
+.topNav{
+    background-color: lightgrey;
+}
