@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=The+Nautigal:wght@700&display=swap');
+
+
+:root {
+    --elems_x: 1;
+    --elems_y: 1;
+    --elem_height: calc(100vh / var(--elems_y));
+    --elem_width: calc(100vw / var(--elems_x));
+}
+
+.radek{
+    /* height: 10px; */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+}
+.item, .winItem{
+    background-color: red;
+    height: var(--elem_height);
+    width: var(--elem_width);
+    color: red;
+    transition: 2s;
+    z-index: auto;
+    overflow: hidden;
+    align-items: center;
+}
+
+.item:hover {
+    background: orange;
+    transform: scale(1.4);
+    transition-duration: 0ms;
+    color: white;
+    z-index: 100;
+    background-image: url("src/fire-png.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(30vh / var(--elems_y));
+}
+
+.winItem:hover {
+    background: #0044ff;
+    transform: scale(2);
+    color: white;
+    z-index: 100;
+    transition-duration: 0ms;
+    background-image: url("src/gandma_transparent-fire.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(40vh / var(--elems_y));
+}
+.item:hover {
+    color: blue;
+}
+
+body {
+    /* height: 100vh; */
+    /* width: 100vw; */
+    margin: 0px;
+    background: red;
+}
+
+html {
+    margin: 0px;
+    overflow: hidden;
+}
+
+div#gamecontainer {margin: 0px;height: 100vh;width: 100vh;/* right: 0px; */; z-index: 1000;}
+
+p {}
+
+p#infop {
+    height: fit-content;
+    margin: 0 1% 0px 1%;
+}
+
+input#height_input {
+    height: fit-content;
+    width: 3em;
+}
+
+button#reset_button {
+    color: black;
+    height: fit-content;
+    position: absolute;
+    /* margin-right: 0px; */
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+div#game_menu {
+    /* z-index: 10000; */
+}
+
+div#start_screen {/* margin: auto; *//* left: 50%; */display: flex;flex-direction: column;flex-wrap: nowrap;align-content: center;justify-content: center;align-items: flex-start;height: 100vh;}
+
+img.grandImage {
+    position: fixed;
+    /* height: 10%; */
+    top: 15%;
+    left: 60%;
+    /* width: 40%; */
+    height: 70%;
+}
+
+div#start_screen_center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17%;
+}
+
+div#end_screen_center {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 53%;
+    /* right: 17%; */
+}
+
+h1 {}
+
+h1.gameName {
+    color: yellow;
+    font-size: 6rem;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'The Nautigal', cursive;
+}
+
+
+.startCenterLow {
+    display: flex;
+    gap: 22%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+p.startButton {
+    background: white;
+    padding: 10%;
+    border-radius: 17px;
+    font-family: 'Raleway', sans-serif;
+    /* font-family: 'The Nautigal', cursive; */
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.endCenterLow {
+    display: flex;
+    gap: 13%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+div#end_screen {/* margin: auto; *//* left: 50%; */display: flex;flex-direction: column;flex-wrap: nowrap;align-content: center;justify-content: center;align-items: flex-start;height: 100vh;}
+
+img.grandImageSad {
+    position: fixed;
+    /* height: 10%; */
+    top: 15%;
+    left: 7%;
+    /* width: 40%; */
+    height: 70%;
+}
+
+div#playSizeDiv {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+p#playSizeP {
+    margin: 4px 10px;
+    color: black;
+}
+
+input#playSizeInput {
+    width: 3rem;
+    text-align: center;
+}
