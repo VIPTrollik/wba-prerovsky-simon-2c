@@ -1,0 +1,46 @@
+@import 'global';
+@import 'header';
+@import 'footer';
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2vh;
+    h1 {
+        font-family: Lato;
+        font-size: 1.25em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.5em;
+        letter-spacing: 0.1em;
+        text-align: left;
+    }
+    input,
+    textarea {
+        background: #7C7474;
+        color: black;
+        border-style: none;
+        padding: 1em;
+        width: 70vw;
+        @include placeholder-color(rgb(0, 0, 0));
+        font-family: Lato;
+        font-size: 0.7em;
+        font-weight: 500;
+        line-height: 1.5em;
+        letter-spacing: 0.1em;
+        text-align: left;
+    }
+    .bigger-input {
+        height: fit-content;
+        height: 5em;
+    }
+    .submit-button {
+        background-color: #7C7474;
+        color: white;
+    }
+}
+
+#footer-aligner {
+    height: 10vh;
+}

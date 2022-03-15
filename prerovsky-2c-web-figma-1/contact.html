@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+
+<body>
+    <nav>
+        <img class="nav-logo" src="images/logo.png" alt="firm logo">
+        <div class="nav-navigation">
+            <img src="images/burger menu.png" alt="burger menu icon">
+            <div class="nav-navigation-long"></div>
+        </div>
+    </nav>
+
+    <form class="contact-form" action="/post_contact">
+        <h2>Kontakt</h2>
+        <input type="text" name="name" placeholder="Jméno">
+        <input type="text" name="surname" placeholder="Příjmení">
+        <input type="text" name="email" placeholder="E-mail">
+        <input type="text" name="phone" placeholder="Telefon">
+        <textarea type="text" name="message" placeholder="Vaše zpráva" class="bigger-input"></textarea>
+        <input type="submit" value="Chci s vámi" class="submit-button c-button">
+
+    </form>
+    <div id="footer-aligner"></div>
+    <footer class="footer">
+        <h2>Obchodní podmínky</h2>
+        <h2>Ochrana osobních údajů</h2>
+    </footer>
+</body>
+
+</html>

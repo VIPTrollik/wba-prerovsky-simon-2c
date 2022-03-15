@@ -1,0 +1,53 @@
+$main-color: red;
+$main-font: 'lato';
+$nav-elements-color: #cbc1b1;
+html {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700, bold;
+    background: #F8F7EC80;
+    overflow-y: scroll;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.c-button.c-button {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #a19b98;
+    width: fit-content;
+    padding: 0.5em 1em;
+    color: black;
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 580;
+    line-height: 1.0em;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+@mixin placeholder-color ($color) {
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: $color;
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $color;
+    }
+}

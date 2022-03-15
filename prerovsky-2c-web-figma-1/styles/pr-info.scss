@@ -1,0 +1,31 @@
+@import 'global';
+@import 'header';
+@import 'footer';
+.info-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10vh 0;
+    gap: 3vh;
+    .info-listitem {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-left: 15vw;
+        img {
+            height: 7vh;
+        }
+        h2 {
+            font-family: Lato;
+            font-size: 0.8em;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 0.9em;
+            letter-spacing: 0.1em;
+            text-align: left;
+            margin-left: 2em;
+            text-transform: uppercase;
+        }
+    }
+}

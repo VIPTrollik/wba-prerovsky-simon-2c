@@ -1,0 +1,20 @@
+nav {
+    background-color: $nav-elements-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 11vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    .nav-logo {
+        height: 95%;
+        margin: 0px;
+        margin-left: 8%;
+    }
+    .nav-navigation {
+        margin-left: auto;
+        margin-right: 10%;
+    }
+}

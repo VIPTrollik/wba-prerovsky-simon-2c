@@ -1,0 +1,176 @@
+html {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700, bold;
+  background: #F8F7EC80;
+  overflow-y: scroll;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.c-button.c-button {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: #a19b98;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5em 1em;
+  color: black;
+  text-transform: uppercase;
+  font-family: Lato;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 580;
+  line-height: 1.0em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+nav {
+  background-color: #cbc1b1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 11vh;
+  width: 100vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .nav-logo {
+  height: 95%;
+  margin: 0px;
+  margin-left: 8%;
+}
+
+nav .nav-navigation {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.footer {
+  background-color: #cbc1b1;
+  height: 11vh;
+  min-height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5vh;
+  margin-bottom: 0;
+}
+
+.footer h2 {
+  font-family: Lato;
+  font-size: 0.8em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2vh;
+}
+
+.contact-form h1 {
+  font-family: Lato;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #7C7474;
+  color: black;
+  border-style: none;
+  padding: 1em;
+  width: 70vw;
+  font-family: Lato;
+  font-size: 0.7em;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: black;
+}
+
+.contact-form input:-moz-placeholder,
+.contact-form textarea:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: black;
+  opacity: 1;
+}
+
+.contact-form input::-moz-placeholder,
+.contact-form textarea::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: black;
+  opacity: 1;
+}
+
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+}
+
+.contact-form .bigger-input {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  height: 5em;
+}
+
+.contact-form .submit-button {
+  background-color: #7C7474;
+  color: white;
+}
+
+#footer-aligner {
+  height: 10vh;
+}
+/*# sourceMappingURL=contact.css.map */

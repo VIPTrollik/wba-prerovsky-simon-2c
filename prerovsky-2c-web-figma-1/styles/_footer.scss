@@ -1,0 +1,20 @@
+.footer {
+    background-color: $nav-elements-color;
+    height: 11vh;
+    min-height: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 0;
+    h2 {
+        font-family: Lato;
+        font-size: 0.8em;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2em;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin: 1em 0;
+    }
+}
