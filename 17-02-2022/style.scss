@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=The+Nautigal:wght@700&display=swap');
+
+
+$main-background-color: red;
+
+:root {
+    --elems_x: 1;
+    --elems_y: 1;
+    --elem_height: calc(100vh / var(--elems_y));
+    --elem_width: calc(100vw / var(--elems_x));
+}
+
+body {
+    margin: 0px;
+    background: $main-background-color;
+}
+
+html {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.gameName {
+    color: yellow;
+    font-size: 6rem;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'The Nautigal', cursive;
+}
+
+@mixin mainbutton {
+    background: white;
+    padding: 10%;
+    border-radius: 17px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#gamecontainer {
+    margin: 0px;
+    height: 100vh;
+    width: 100vh;
+    z-index: 1000;
+
+    .radek {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100vw;
+
+        @mixin baseitem {
+            background-color: $main-background-color;
+            height: var(--elem_height);
+            width: var(--elem_width);
+            transition: 2s;
+            z-index: auto;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .item {
+            @include baseitem;
+
+            &:hover {
+                background: orange;
+                transform: scale(1.4);
+                transition-duration: 0ms;
+                z-index: 100;
+                background-image: url("src/fire-png.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: calc(30vh / var(--elems_y));
+            }
+        }
+
+        .winItem {
+            @include baseitem();
+
+            &:hover {
+                background: #0044ff;
+                transform: scale(2);
+                z-index: 100;
+                transition-duration: 0ms;
+                background-image: url("src/gandma_transparent-fire.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: calc(40vh / var(--elems_y));
+            }
+        }
+    }
+
+    #reset_button {
+        color: black;
+        height: fit-content;
+        position: absolute;
+        /* margin-right: 0px; */
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+}
+
+#start_screen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+
+    #start_screen_center {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 17%;
+    }
+
+    .startCenterLow {
+        display: flex;
+        gap: 22%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+
+        p {
+            @include mainbutton();
+        }
+    }
+
+    #playSizeDiv {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 800;
+        font-size: 1rem;
+
+        p {
+            margin: 4px 10px;
+            color: black;
+        }
+
+        input {
+            width: 3rem;
+            text-align: center;
+            border-radius: 10px;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+        }
+    }
+
+    .grandImage {
+        position: fixed;
+        top: 15%;
+        left: 60%;
+        height: 70%;
+    }
+}
+
+#end_screen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+
+    #end_screen_center {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 53%;
+
+        .endCenterLow {
+            display: flex;
+            gap: 13%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                @include mainbutton();
+            }
+        }
+    }
+
+    .grandImage {
+        position: fixed;
+        top: 15%;
+        left: 7%;
+        height: 70%;
+    }
+
+}

@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=The+Nautigal:wght@700&display=swap");
+:root {
+  --elems_x: 1;
+  --elems_y: 1;
+  --elem_height: calc(100vh / var(--elems_y));
+  --elem_width: calc(100vw / var(--elems_x));
+}
+
+body {
+  margin: 0px;
+  background: red;
+}
+
+html {
+  margin: 0px;
+  overflow: hidden;
+}
+
+.gameName {
+  color: yellow;
+  font-size: 6rem;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'The Nautigal', cursive;
+}
+
+#gamecontainer {
+  margin: 0px;
+  height: 100vh;
+  width: 100vh;
+  z-index: 1000;
+}
+
+#gamecontainer .radek {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100vw;
+}
+
+#gamecontainer .radek .item {
+  background-color: red;
+  height: var(--elem_height);
+  width: var(--elem_width);
+  -webkit-transition: 2s;
+  transition: 2s;
+  z-index: auto;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gamecontainer .radek .item:hover {
+  background: orange;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-transition-duration: 0ms;
+          transition-duration: 0ms;
+  z-index: 100;
+  background-image: url("src/fire-png.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: calc(30vh / var(--elems_y));
+}
+
+#gamecontainer .radek .winItem {
+  background-color: red;
+  height: var(--elem_height);
+  width: var(--elem_width);
+  -webkit-transition: 2s;
+  transition: 2s;
+  z-index: auto;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gamecontainer .radek .winItem:hover {
+  background: #0044ff;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  z-index: 100;
+  -webkit-transition-duration: 0ms;
+          transition-duration: 0ms;
+  background-image: url("src/gandma_transparent-fire.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: calc(40vh / var(--elems_y));
+}
+
+#gamecontainer #reset_button {
+  color: black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  /* margin-right: 0px; */
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+#start_screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
+}
+
+#start_screen #start_screen_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 17%;
+}
+
+#start_screen .startCenterLow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 22%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#start_screen .startCenterLow p {
+  background: white;
+  padding: 10%;
+  border-radius: 17px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#start_screen #playSizeDiv {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+#start_screen #playSizeDiv p {
+  margin: 4px 10px;
+  color: black;
+}
+
+#start_screen #playSizeDiv input {
+  width: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+#start_screen .grandImage {
+  position: fixed;
+  top: 15%;
+  left: 60%;
+  height: 70%;
+}
+
+#end_screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
+}
+
+#end_screen #end_screen_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 53%;
+}
+
+#end_screen #end_screen_center .endCenterLow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 13%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#end_screen #end_screen_center .endCenterLow p {
+  background: white;
+  padding: 10%;
+  border-radius: 17px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#end_screen .grandImage {
+  position: fixed;
+  top: 15%;
+  left: 7%;
+  height: 70%;
+}
+/*# sourceMappingURL=style.css.map */

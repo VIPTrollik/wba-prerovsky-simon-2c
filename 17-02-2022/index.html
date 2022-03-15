@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="game_window" hidden>
+        <button id="reset_button" onclick="reset();">reset</button>
+
+        <div id="game_menu">
+            <button onclick="new_game();">start</button>
+        </div>
+        <div id="gamecontainer">
+            
+        </div>
+    </div>
+    <div id="end_screen" hidden style="display:none">
+        <div id="end_screen_center" hidden>
+            <h1 class="gameName">You WIN!</h1>
+            <h2 id="scoreShow">score: null</h2>
+            <div class="endCenterLow">
+                <p class="startButton" onclick="reset()">New game</p>
+                <p class="startButton" onclick="credits()">Credits</p>
+            </div>
+        </div>
+        <img id="grandImageSad" class="grandImage" src="src/gandma_transparent-sad.png">
+    </div>
+    <div id="start_screen">
+        <div id="start_screen_center">
+            <h1 class="gameName">Game o Fire</h1>
+            <div class="startCenterLow">
+                <p class="startButton" onclick="start()">Play</p>
+                <p class="startButton" onclick="credits()">Credits</p>
+            </div>
+        </div>
+        <img id="grandImage" class="grandImage" src="src/gandma_transparent.png">
+        <div id="playSizeDiv">
+            <p id="playSizeP">size:</p>
+            <input id="playSizeInput" value="10">
+        </div>
+    </div>
+    <div id="credits">
+        <p>Ipsum lorem</p>
+        <h1>Send shrek pics</h1>
+    </div>
+    
+</body>
+
+<script>
+    state = "not"
+    gamecontainer = document.getElementById("gamecontainer")
+    menudiv = document.getElementById("game_menu")
+    size_input = document.getElementById("height_input")
+    start_screendiv = document.getElementById("start_screen")
+    end_screen_div = document.getElementById("end_screen")
+    game_window_div = document.getElementById("game_window")
+    grandImage = document.getElementById("grandImage")
+    playSizeInput = document.getElementById("playSizeInput")
+    size_input_div = document.getElementById("playSizeDiv")
+    scoreshow = document.getElementById("scoreShow")
+    tlink = "aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUSZhYl9jaGFubmVsPVJpY2tBc3RsZXk="
+    tlk = atob(tlink)
+    var start_time = Date.now();
+    var gamesize = 0;
+
+    function new_game() {
+        console.log("starting")
+        state = "running"
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        let elements_x = parseInt(playSizeInput.value)  
+        let element_size_x = width / elements_x
+        let elements_y = Math.round(height / element_size_x)
+        gamesize = elements_x*elements_y;
+        console.log(elements_y)
+        gamecontainer.innerHTML = ""
+        menudiv.hidden = true;
+        let radek_element = document.createElement("div")
+        radek_element.className = "radek"
+        let sqr_item = document.createElement("div")
+        sqr_item.className = "item"
+        document.documentElement.style.setProperty('--elems_x', elements_x);
+        document.documentElement.style.setProperty('--elems_y', elements_y);
+        for (let i = 0; i < elements_y; i++) {
+            let radek_clone = radek_element.cloneNode()
+            for (let i = 0; i < elements_x; i++) {
+                radek_clone.appendChild(sqr_item.cloneNode())
+            }
+            gamecontainer.appendChild(radek_clone)
+        }
+        var items = gamecontainer.getElementsByClassName("item") 
+        var item = items[Math.floor(Math.random()*items.length)];
+        console.log(item)
+        item.className = "winItem"
+        item.onclick = function() {win()}
+        start_time = Date.now()
+        //item.style = "color: blue;"
+
+
+    }
+    function start(){
+        start_screendiv.hidden = true;
+        end_screen_div.hidden = true;
+        game_window_div.hidden = false;
+        grandImage.hidden = true;
+        size_input_div.style = "display:none";
+        new_game();
+
+    }
+    function reset() {
+        console.log("reset")
+        menudiv.hidden = false;
+        gamecontainer.innerHTML = ""
+        end_screen_div.hidden = true;
+        game_window_div.hidden = true;
+        start_screendiv.hidden = false;
+        start_screendiv.style = "";
+        end_screen_div.style = "display:none";
+        grandImage.hidden = false;
+        size_input_div.style = ""
+
+    }
+    function win(){
+        //show win screen
+        game_window_div.hidden = true;
+        end_screen_div.style = "";
+        end_screen_div.hidden = false;
+        let gametime = Date.now()-start_time;
+        let score = gamesize / (gametime / 1000);
+        scoreshow.innerHTML = "time: " + Math.round(gametime/10)/100 + "s   score: " + Math.round(score*100)/100;
+        
+    }
+    function credits(){
+        end_screen_div.hidden = true;
+        game_window_div.hidden = true;
+        document.location = tlk;
+        start_screendiv.hidden = false;
+    }
+
+
+
+</script>
+
+</html>
