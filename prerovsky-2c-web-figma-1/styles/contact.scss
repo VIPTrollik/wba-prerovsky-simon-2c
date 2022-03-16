@@ -7,6 +7,22 @@
     flex-wrap: nowrap;
     align-items: center;
     gap: 2vh;
+    max-width: 50em;
+    margin: 0 auto;
+    div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 2vh;
+        @media (min-width: $breakpoint-tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+        }
+    }
     h1 {
         font-family: Lato;
         font-size: 1.25em;
@@ -30,9 +46,15 @@
         line-height: 1.5em;
         letter-spacing: 0.1em;
         text-align: left;
+        max-width: 60em;
+    }
+    input {
+        @media (min-width: $breakpoint-tablet) {
+            width: calc(35vw - 2em);
+            max-width: 28em;
+        }
     }
     .bigger-input {
-        height: fit-content;
         height: 5em;
     }
     .submit-button {

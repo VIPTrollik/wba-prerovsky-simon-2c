@@ -105,6 +105,42 @@ nav .nav-navigation {
       -ms-flex-align: center;
           align-items: center;
   gap: 2vh;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+.contact-form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2vh;
+}
+
+@media (min-width: 768px) {
+  .contact-form div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: auto;
+  }
 }
 
 .contact-form h1 {
@@ -130,6 +166,7 @@ nav .nav-navigation {
   line-height: 1.5em;
   letter-spacing: 0.1em;
   text-align: left;
+  max-width: 60em;
 }
 
 .contact-form input::-webkit-input-placeholder,
@@ -158,10 +195,14 @@ nav .nav-navigation {
   color: black;
 }
 
+@media (min-width: 768px) {
+  .contact-form input {
+    width: calc(35vw - 2em);
+    max-width: 28em;
+  }
+}
+
 .contact-form .bigger-input {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   height: 5em;
 }
 

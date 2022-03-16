@@ -91,9 +91,30 @@ nav .nav-navigation {
   margin: 1em 0;
 }
 
-.dovolena-banner {
-  background-color: #7C7474;
+.dovolena-pole {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 10vw;
+}
+
+@media (min-width: 768px) {
+  .dovolena-pole {
+    background-image: url("../images/hero-image.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 60vh;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.dovolena-pole .dovolena-banner {
+  background-color: #7C7474;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,28 +126,49 @@ nav .nav-navigation {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #F8F7EC;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.dovolena-banner h2 {
+@media (min-width: 768px) {
+  .dovolena-pole .dovolena-banner {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 30em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    background: rgba(124, 116, 116, 0.5);
+    padding: 1em 0;
+  }
+}
+
+.dovolena-pole .dovolena-banner h2 {
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-align: center;
-  margin: 5vw;
+  margin: 1em;
 }
 
-.dovolena-banner p {
+.dovolena-pole .dovolena-banner p {
   font-size: 0.85em;
   font-weight: 200;
   line-height: 1.1em;
   letter-spacing: 0.1em;
   text-align: block;
-  margin: 3vw;
+  margin: 1em;
   text-align: left;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.dovolena-pole .dovolena-banner .c-button {
+  color: #F8F7EC;
 }
 
 .trip-offers {
@@ -139,6 +181,22 @@ nav .nav-navigation {
           flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .trip-offers {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2em;
+    margin: 3em 0;
+  }
+}
+
 .trip-offers .trip-offer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,7 +205,24 @@ nav .nav-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 10vw;
+}
+
+@media (min-width: 768px) {
+  .trip-offers .trip-offer {
+    margin: 0;
+    width: 22em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .trip-offers .trip-offer img {
@@ -155,6 +230,12 @@ nav .nav-navigation {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .trip-offers .trip-offer img {
+    height: 22em;
+  }
 }
 
 .trip-offers .trip-offer div {
@@ -174,6 +255,13 @@ nav .nav-navigation {
   margin-left: 5vw;
 }
 
+@media (min-width: 768px) {
+  .trip-offers .trip-offer div {
+    margin-left: 0.5em;
+    margin-left: 0;
+  }
+}
+
 .trip-offers .trip-offer div h3 {
   text-transform: uppercase;
   font-size: 0.7em;
@@ -186,6 +274,12 @@ nav .nav-navigation {
   width: max-content;
 }
 
+@media (min-width: 768px) {
+  .trip-offers .trip-offer div h3 {
+    font-size: 1.5em;
+  }
+}
+
 .trip-offers .trip-offer div p {
   width: auto;
   font-size: 0.6em;
@@ -195,7 +289,13 @@ nav .nav-navigation {
   text-align: left;
 }
 
-.chci-button.chci-button.chci-button {
+@media (min-width: 768px) {
+  .trip-offers .trip-offer div p {
+    font-size: 1em;
+  }
+}
+
+.chci-button.chci-button.chci-button.chci-button.chci-button {
   margin: 0 auto;
   background-color: #7C7474;
   color: #F8F7EC;
