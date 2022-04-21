@@ -1,0 +1,56 @@
+<div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addEventModalLabel">New message</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="modalAddEventForm" action="/newTimelineItem" method="post">
+                    <div class="form-group">
+                        <label for="title-input" class="col-form-label">Title:</label>
+                        <input id="title-input" class="form-control" type="text" name="title" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="time-input" class="col-form-label">Time:</label>
+                        <input id="time-input" class="form-control" type="datetime-local" name="time"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">What happened:</label>
+                        <textarea class="form-control" id="message-text" name="content" required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="trySubmit()">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("addEventModal").addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget // Button that triggered the modal
+        var time = button.attributes['buttonTime'].value // Extract info from data-* attributes
+        console.log(time)
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        console.log(this)
+        var modal = this
+
+        modal.querySelector("#time-input").value = time
+    })
+    //checks if all inputs are filled and if so, submits the form
+    function trySubmit() {
+        var title = document.getElementById("title-input").value
+        var time = document.getElementById("time-input").value
+        var content = document.getElementById("message-text").value
+        if (title != "" && time != "" && content != "") {
+            document.getElementById("modalAddEventForm").submit()
+        }
+    }
+</script>

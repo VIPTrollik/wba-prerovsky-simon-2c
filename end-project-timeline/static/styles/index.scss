@@ -1,0 +1,106 @@
+@import 'colors';
+
+
+.timeline-container {
+  min-width: max-content;
+  height: 70vh;
+  padding: 0;
+  margin: 0;
+  background-color: $timeline-background-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.add-item-button {
+  height: 3em;
+  width: 3em;
+}
+
+.timeCardFooter{
+  text-align: right;
+}
+
+.overflowhider {
+  overflow-x: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  background-color: $timeline-background-color;
+  
+}
+
+.overflowhider::-webkit-scrollbar {
+  display: none;
+  }
+
+.show-on-hover {
+  width: fit-content;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0);
+  margin: -50px;
+  padding: 50px;
+  transition-duration: 0.5s;
+  transition-property: width, height, margin, padding;
+}
+
+.show-on-hover:hover>*,.show-on-hover:active>*{
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  
+}
+.show-on-hover>*{
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-property: width, height, margin, padding, opacity;
+
+}
+.intimeline_add_event_button{
+  background-color: blue;
+  border: none;
+  &:hover{
+    background-color: blue;
+    border: none;
+    
+  }
+}
+
+.delete-button-section{
+  height: 0px;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.delete-item-card-button{
+  margin: 3px;
+  height: 2em;
+  width: min-content;
+  text-align: center;
+  align-content: center;
+  padding-bottom: 30px;
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-flex;
+  align-items: center; 
+}
